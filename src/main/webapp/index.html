@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="ajax.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tasks</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Description</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Person</th>
+
+    </tr>
+    </thead>
+    <tbody id="tableTasks">
+</tbody>
+</table>
+<br>
+<h3>Add Task:</h3>
+<p>If you put wrong or empty value, cell will be fill automatically with default value</p>
+<p>Description:<input type="text" id="description" name="description"/></p>
+<p>Start Date:<input type="text" id="startDate" name="startDate"/></p>
+<p>End Date:<input type="text" id="endDate" name="endDate"/></p>
+<p>Start Time:<input type="text" id="startTime" name="startTime"/></p>
+<p>End Time:<input type="text" id="endTime" name="endTime"/></p>
+<p>Person:<input type="text" id="person" name="person"/></p>
+
+<input type="button" id="add" value="add task" onClick="addToTable('description','startDate','endDate','startTime','endTime','person','tableTasks');"/>
+<input type="button" id="test" value="show table" onClick="getTable('description','tableTasks');"/>
+<h3>Delete Task:</h3>
+<p>Write description of task, which will be delete: <input type="text" id="deleteDescription" name="deleteDescription"/></p>
+<input type="button" id="deleteTask" value="delete task" onClick="deleteTask('deleteDescription','tableTasks');"/>
+<p><h3><a href="Contacts.html">Contacts</a></h3></p>
+</body>
+</html>

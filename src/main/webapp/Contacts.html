@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="contact.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Contacts</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Telephone</th>
+        <th>Address</th>
+        <th>E-mail</th>
+        <th>Person</th>
+    </tr>
+    </thead>
+    <tbody id="tableContacts">
+    </tbody>
+</table>
+<br>
+<h3>Add Contacts:</h3>
+<p>If you put wrong or empty value, cell will be fill automatically with default value</p>
+<p>Telephone:<input type="text" id="telephone" name="telephone"/></p>
+<p>Address:<input type="text" id="address" name="address"/></p>
+<p>E-mail:<input type="text" id="email" name="email"/></p>
+<p>Person:<input type="text" id="person" name="person"/></p>
+
+<input type="button" id="add" value="add contact" onClick="addToTable('telephone','address','email','person','tableContacts');"/>
+<input type="button" id="test" value="show table" onClick="getTable('telephone','tableContacts');"/>
+<h3>Delete Contact:</h3>
+<p>Write id of row, which will be delete with person from task table: <input type="text" id="deleteTelephone" name="deleteTelephone"/></p>
+<input type="button" id="deleteContact" value="delete contact" onClick="deleteContact('deleteTelephone','tableContacts');"/>
+<p><h3><a href="index.html">Tasks</a></h3></p>
+</body>
+</html>
